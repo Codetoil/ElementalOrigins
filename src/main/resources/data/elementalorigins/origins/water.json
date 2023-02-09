@@ -1,0 +1,8 @@
+{
+    "powers": [],
+    "name": "origin.elementalorigins.water",
+    "description": "origin.elementalorigins.water.description",
+    "icon": "minecraft:water_bucket",
+    "order": 1,
+    "impact": 3
+}

@@ -1,0 +1,8 @@
+{
+    "powers": [],
+    "name": "origin.elementalorigins.air",
+    "description": "origin.elementalorigins.air.description",
+    "icon": "minecraft:air",
+    "order": 1,
+    "impact": 3
+}
