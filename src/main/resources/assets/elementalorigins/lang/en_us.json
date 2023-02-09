@@ -1,3 +1,11 @@
 {
-    
+    "origin_layer.elementalorigins.element.name": "Element",
+    "origin_layer.elementalorigins.element.missing_name": "None",
+    "origin_layer.elementalorigins.element.missing_description": "You must pick an Element.",
+    "origin.elementalorigins.air": "Air",
+    "origin.elementalorigins.death": "Death",
+    "origin.elementalorigins.earth": "Earth",
+    "origin.elementalorigins.fire": "Fire",
+    "origin.elementalorigins.life": "Life",
+    "origin.elementalorigins.water": "water"
 }
