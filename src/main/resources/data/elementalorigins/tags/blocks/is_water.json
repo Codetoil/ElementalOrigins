@@ -1,5 +1,20 @@
 {
     "values": [
-        
+        "minecraft:ice",
+        "minecraft:dark_prismarine",
+        "minecraft:dark_prismarine_slab",
+        "minecraft:dark_prismarine_stairs",
+        "minecraft:powder_snow",
+        "minecraft:prismarine",
+        "minecraft:prismarine_brick_slab",
+        "minecraft:prismarine_brick_stairs",
+        "minecraft:prismarine_bricks",
+        "minecraft:prismarine_slab",
+        "minecraft:prismarine_stairs",
+        "minecraft:prismarine_wall",
+        "minecraft:snow",
+        "minecraft:snow_block",
+        "minecraft:water",
+        "minecraft:wet_sponge"
     ]
 }
