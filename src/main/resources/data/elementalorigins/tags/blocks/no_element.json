@@ -9,6 +9,9 @@
         "minecraft:chain_command_block",
         "minecraft:repeating_command_block",
         "minecraft:jigsaw",
-        "minecraft:light"
+        "minecraft:light",
+        "minecraft:dragon_head",
+        "minecraft:dragon_wall_head",
+        "minecraft:dragon_egg"
     ]
 }
