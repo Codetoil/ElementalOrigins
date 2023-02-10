@@ -1,3 +1,37 @@
 {
-    "values": []
+    "values": [
+        "minecraft:boat",
+        "minecraft:bee",
+        "minecraft:cat",
+        "minecraft:cave_spider",
+        "minecraft:chicken",
+        "minecraft:chest_boat",
+        "minecraft:cow",
+        "minecraft:creeper",
+        "minecraft:donkey",
+        "minecraft:dragon_fireball",
+        "minecraft:egg",
+        "minecraft:fox",
+        "minecraft:frog",
+        "minecraft:goat",
+        "minecraft:hoglin",
+        "minecraft:horse",
+        "minecraft:llama",
+        "minecraft:mule",
+        "minecraft:ocelot",
+        "minecraft:panda",
+        "minecraft:parrot",
+        "minecraft:pig",
+        "minecraft:piglin",
+        "minecraft:piglin_brute",
+        "minecraft:polar_bear",
+        "minecraft:rabbit",
+        "minecraft:sheep",
+        "minecraft:slime",
+        "minecraft:spider",
+        "minecraft:turtle",
+        "minecraft:villager",
+        "minecraft:wandering_trader",
+        "minecraft:wolf"
+    ]
 }
