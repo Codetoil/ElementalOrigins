@@ -1,0 +1,27 @@
+{
+    "values": [
+        "minecraft:drowned",
+        "minecraft:evoker",
+        "minecraft:evoker_fangs",
+        "minecraft:giant",
+        "minecraft:husk",
+        "minecraft:illusioner",
+        "minecraft:mooshroom",
+        "minecraft:phantom",
+        "minecraft:pillager",
+        "minecraft:ravager",
+        "minecraft:stray",
+        "minecraft:skeleton",
+        "minecraft:skeleton_horse",
+        "minecraft:warden",
+        "minecraft:witch",
+        "minecraft:wither",
+        "minecraft:wither_skeleton",
+        "minecraft:wither_skull",
+        "minecraft:zoglin",
+        "minecraft:zombie",
+        "minecraft:zombie_horse",
+        "minecraft:zombie_villager",
+        "minecraft:zombified_piglin"
+    ]
+}

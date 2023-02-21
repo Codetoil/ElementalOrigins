@@ -1,0 +1,16 @@
+{
+	"type": "origins:launch",
+	"cooldown": 50,
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/resource_bar.png",
+		"bar_index": 4
+	},
+	"sound": "minecraft:entity.parrot.fly",
+	"speed": 2,
+	"name": "power.elementalorigins.multi_jump.name",
+	"description": "power.elementalorigins.multi_jump.description",
+	"key": {
+		"key": "key.jump",
+		"continuous": false
+	}
+}

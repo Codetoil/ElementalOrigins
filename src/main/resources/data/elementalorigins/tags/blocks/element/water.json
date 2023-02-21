@@ -1,9 +1,12 @@
 {
     "values": [
-        "minecraft:ice",
+        "minecraft:bubble_column",
+        "minecraft:conduit",
         "minecraft:dark_prismarine",
         "minecraft:dark_prismarine_slab",
         "minecraft:dark_prismarine_stairs",
+        "minecraft:frosted_ice",
+        "minecraft:ice",
         "minecraft:powder_snow",
         "minecraft:prismarine",
         "minecraft:prismarine_brick_slab",
