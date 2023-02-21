@@ -1,12 +1,12 @@
 {
     "replace": true,
     "origins": [
-        "elementalorigins:life",
-        "elementalorigins:death",
-        "elementalorigins:fire",
-        "elementalorigins:air",
-        "elementalorigins:water",
-        "elementalorigins:earth"
+        "elementalorigins:element/life",
+        "elementalorigins:element/death",
+        "elementalorigins:element/fire",
+        "elementalorigins:element/air",
+        "elementalorigins:element/water",
+        "elementalorigins:element/earth"
     ],
     "name": "origin_layer.elementalorigins.element.name",
     "missing_name": "origin_layer.elementalorigins.element.missing_name",
