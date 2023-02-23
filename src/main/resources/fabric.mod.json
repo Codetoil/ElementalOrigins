@@ -19,6 +19,9 @@
   "entrypoints": {
     "main": [
       "io.github.codetoil.elementalorigins.ElementalOrigins"
+    ],
+    "calio:ordered-resource-listener": [
+      "io.github.codetoil.elementalorigins.elements.ElementManager"
     ]
   },
   "mixins": [

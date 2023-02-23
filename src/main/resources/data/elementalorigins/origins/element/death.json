@@ -1,8 +1,0 @@
-{
-    "powers": [],
-    "name": "origin.elementalorigins.death",
-    "description": "origin.elementalorigins.death.description",
-    "icon": "minecraft:zombie_head",
-    "order": 1,
-    "impact": 3
-}

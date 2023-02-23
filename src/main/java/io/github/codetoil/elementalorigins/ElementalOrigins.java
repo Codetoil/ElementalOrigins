@@ -8,7 +8,6 @@ import io.github.apace100.calio.ClassUtil;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataType;
 import io.github.apace100.calio.data.SerializableDataTypes;
-import io.github.codetoil.elementalorigins.elements.Element;
 import io.github.codetoil.elementalorigins.elements.ElementManager;
 import io.github.codetoil.elementalorigins.power.ActionKnowingDamageOnHitPower;
 import io.github.codetoil.elementalorigins.power.SelfActionKnowingDamageOnHitPower;
@@ -17,8 +16,6 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
 import net.minecraft.entity.Entity;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
 import org.slf4j.Logger;
@@ -36,8 +33,6 @@ public class ElementalOrigins implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("elementalorigins");
 
 
-	public static RegistryKey<Registry<Element>> ELEMENT_REG_KEY;
-
 	public static Registry<ActionFactory<Pair<Entity, Float>>> ENTITY_DAMAGE_PAIR_ACTION_FACTORY_REG;
 	public static Registry<ActionFactory<Triplet<Entity, Entity, Float>>> BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_REG;
 
@@ -49,8 +44,6 @@ public class ElementalOrigins implements ModInitializer {
 
 	public static SerializableDataType<List<ActionFactory<Pair<Entity, Float>>.Instance>> ENTITY_DAMAGE_PAIRS_DATA_TYPE;
 	public static SerializableDataType<List<ActionFactory<Triplet<Entity, Entity, Float>>.Instance>> BIENTITY_DAMAGE_TRIPLETS_DATA_TYPE;
-
-	public static SerializableDataType<TagKey<Element>> ELEMENT_TAG_DATA_TYPE;
 
 
 	@Override
@@ -96,8 +89,6 @@ public class ElementalOrigins implements ModInitializer {
 		ENTITY_DAMAGE_PAIRS_DATA_TYPE = SerializableDataType.list(ENTITY_DAMAGE_PAIR_ACTION_FACTORY_DATA_TYPE);
 		BIENTITY_DAMAGE_TRIPLETS_DATA_TYPE = SerializableDataType.list(BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_DATA_TYPE);
 
-		ELEMENT_REG_KEY = RegistryKey.ofRegistry(new Identifier("elementalorigins", "element"));
-		ELEMENT_TAG_DATA_TYPE = SerializableDataType.tag(ELEMENT_REG_KEY);
 
 		PowerFactory<SelfActionKnowingDamageOnHitPower> selfActionKnowingDamageOnHitPowerPowerFactory =
 				SelfActionKnowingDamageOnHitPower.createFactory();

@@ -6,16 +6,42 @@ import io.github.apace100.origins.origin.Origin;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.fluid.Fluid;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
+import java.util.Objects;
+
 public record Element(Identifier id, Origin origin, TagKey<Block> blocks, TagKey<EntityType<?>> entityTypes, TagKey<Fluid> fluids,
-                      TagKey<Element> weaknesses, TagKey<Element> strengths) implements DataObject<Element>
+                      ElementTag weaknesses, ElementTag strengths) implements DataObject<Element>
 {
-	public static final ElementFactory ELEMENT_FACTORY = new ElementFactory();
+
 	@Override
 	public DataObjectFactory<Element> getFactory()
 	{
-		return ELEMENT_FACTORY;
+		return ElementManager.ELEMENT_FACTORY;
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+		Element element = (Element) o;
+		return id.equals(element.id);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return Objects.hash(id);
 	}
 }

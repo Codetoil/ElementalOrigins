@@ -1,8 +1,0 @@
-{
-    "powers": [],
-    "name": "origin.elementalorigins.fire",
-    "description": "origin.elementalorigins.fire.description",
-    "icon": "minecraft:lava_bucket",
-    "order": 1,
-    "impact": 3
-}
