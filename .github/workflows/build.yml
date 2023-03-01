@@ -62,8 +62,7 @@ jobs:
         dist: [
           temurin,
           zulu,
-          liberica,
-          microsoft
+          liberica
         ]
         # Use these Java versions
         java: [
