@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.1-SNAPSHOT'
+	id 'fabric-loom' version '1.2-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -46,7 +46,6 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cc_base_version}"
     modImplementation "com.github.apace100:apoli:${project.apoli_version}"
     modImplementation "com.github.apace100:calio:${project.calio_version}"
 	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
