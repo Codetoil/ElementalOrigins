@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
 import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
 
+@SuppressWarnings("deprecation")
 public class ElementManager implements OrderedResourceListenerInitializer
 {
 	public static final Identifier ELEMENT_ID = new Identifier("elementalorigins", "element");

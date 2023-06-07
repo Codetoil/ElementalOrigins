@@ -3,10 +3,6 @@ package io.github.codetoil.elementalorigins.elements;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import io.github.apace100.calio.registry.DataObjectFactory;
-import net.minecraft.util.Identifier;
-
-import java.util.List;
-import java.util.Objects;
 
 public class ElementTagFactory implements DataObjectFactory<ElementTag>
 {

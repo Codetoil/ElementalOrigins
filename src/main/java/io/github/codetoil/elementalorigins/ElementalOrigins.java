@@ -33,20 +33,21 @@ public class ElementalOrigins implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("elementalorigins");
 
 
-	public static Registry<ActionFactory<Pair<Entity, Float>>> ENTITY_DAMAGE_PAIR_ACTION_FACTORY_REG;
-	public static Registry<ActionFactory<Triplet<Entity, Entity, Float>>> BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_REG;
+	public static Registry<ActionFactory<Pair<Entity, Float>>> ENTITY_FLOAT_PAIR_ACTION_FACTORY_REG;
+	public static Registry<ActionFactory<Triplet<Entity, Entity, Float>>> BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_REG;
 
-	public static ActionType<Pair<Entity, Float>> ENTITY_DAMAGE_PAIR_ACTION_TYPE;
-	public static ActionType<Triplet<Entity, Entity, Float>> BIENTITY_DAMAGE_TRIPLET_ACTION_TYPE;
+	public static ActionType<Pair<Entity, Float>> ENTITY_FLOAT_PAIR_ACTION_TYPE;
+	public static ActionType<Triplet<Entity, Entity, Float>> BIENTITY_FLOAT_TRIPLET_ACTION_TYPE;
 
-	public static SerializableDataType<ActionFactory<Pair<Entity, Float>>.Instance> ENTITY_DAMAGE_PAIR_ACTION_FACTORY_DATA_TYPE;
-	public static SerializableDataType<ActionFactory<Triplet<Entity, Entity, Float>>.Instance> BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_DATA_TYPE;
+	public static SerializableDataType<ActionFactory<Pair<Entity, Float>>.Instance> ENTITY_FLOAT_PAIR_ACTION_FACTORY_DATA_TYPE;
+	public static SerializableDataType<ActionFactory<Triplet<Entity, Entity, Float>>.Instance> BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_DATA_TYPE;
 
-	public static SerializableDataType<List<ActionFactory<Pair<Entity, Float>>.Instance>> ENTITY_DAMAGE_PAIRS_DATA_TYPE;
-	public static SerializableDataType<List<ActionFactory<Triplet<Entity, Entity, Float>>.Instance>> BIENTITY_DAMAGE_TRIPLETS_DATA_TYPE;
+	public static SerializableDataType<List<ActionFactory<Pair<Entity, Float>>.Instance>> ENTITY_FLOAT_PAIRS_DATA_TYPE;
+	public static SerializableDataType<List<ActionFactory<Triplet<Entity, Entity, Float>>.Instance>> BIENTITY_FLOAT_TRIPLETS_DATA_TYPE;
 
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
@@ -54,40 +55,40 @@ public class ElementalOrigins implements ModInitializer {
 
 		LOGGER.info("Initializing Elemental Origins");
 
-		ENTITY_DAMAGE_PAIR_ACTION_FACTORY_REG = FabricRegistryBuilder.createSimple(ClassUtil.<ActionFactory<Pair<Entity, Float>>>castClass(ActionFactory.class), new Identifier("elementalorigins:entity_damage_pair_action")).buildAndRegister();
-		BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_REG = FabricRegistryBuilder.createSimple(ClassUtil.<ActionFactory<Triplet<Entity, Entity, Float>>>castClass(ActionFactory.class), new Identifier("elementalorigins:bientity_damage_triplet_action")).buildAndRegister();
+		ENTITY_FLOAT_PAIR_ACTION_FACTORY_REG = FabricRegistryBuilder.createSimple(ClassUtil.<ActionFactory<Pair<Entity, Float>>>castClass(ActionFactory.class), new Identifier("elementalorigins:entity_float_pair_action")).buildAndRegister();
+		BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_REG = FabricRegistryBuilder.createSimple(ClassUtil.<ActionFactory<Triplet<Entity, Entity, Float>>>castClass(ActionFactory.class), new Identifier("elementalorigins:bientity_float_triplet_action")).buildAndRegister();
 
 		ActionFactory<Pair<Entity, Float>> percentageDamageAction = new ActionFactory<>(new Identifier("elementalorigins", "percentage_damage"), new SerializableData()
 				.add("percentage", SerializableDataTypes.FLOAT)
-				.add("source", SerializableDataTypes.DAMAGE_SOURCE),
+				.add("damage_type", SerializableDataTypes.DAMAGE_TYPE),
 				(data, entityFloatPair) -> {
 					Entity entity = entityFloatPair.getLeft();
 					Float damage = entityFloatPair.getRight();
-					entity.damage(data.get("source"), damage * (1.0f + (Float) data.get("percentage") / 100.0f));
+					entity.damage(data.get("damage_type"), damage * (1.0f + (Float) data.get("percentage") / 100.0f));
 				});
 		ActionFactory<Triplet<Entity, Entity, Float>> biEntityPercentageDamageAction = new ActionFactory<>(new Identifier("elementalorigins", "bientity_percentage_damage"), new SerializableData()
 				.add("percentage", SerializableDataTypes.FLOAT)
-				.add("source", SerializableDataTypes.DAMAGE_SOURCE),
+				.add("damage_type", SerializableDataTypes.DAMAGE_TYPE),
 				(data, biEntityFloatTriplet) -> {
 					Entity entityA = biEntityFloatTriplet.getA();
 					Entity entityB = biEntityFloatTriplet.getB();
 					Float damage = biEntityFloatTriplet.getC();
 					float extraDamage = damage * (1.0f + (Float) data.get("percentage") / 100.0f);
-					entityA.damage(data.get("source"), extraDamage);
-					entityB.damage(data.get("source"), extraDamage);
+					entityA.damage(data.get("damage_type"), extraDamage);
+					entityB.damage(data.get("damage_type"), extraDamage);
 				});
 
-		Registry.register(ENTITY_DAMAGE_PAIR_ACTION_FACTORY_REG, percentageDamageAction.getSerializerId(), percentageDamageAction);
-		Registry.register(BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_REG, biEntityPercentageDamageAction.getSerializerId(), biEntityPercentageDamageAction);
+		Registry.register(ENTITY_FLOAT_PAIR_ACTION_FACTORY_REG, percentageDamageAction.getSerializerId(), percentageDamageAction);
+		Registry.register(BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_REG, biEntityPercentageDamageAction.getSerializerId(), biEntityPercentageDamageAction);
 
-		ENTITY_DAMAGE_PAIR_ACTION_TYPE = new ActionType<>("EntityDamagePair", ENTITY_DAMAGE_PAIR_ACTION_FACTORY_REG);
-		BIENTITY_DAMAGE_TRIPLET_ACTION_TYPE = new ActionType<>("BiEntityDamageTriplet", BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_REG);
+		ENTITY_FLOAT_PAIR_ACTION_TYPE = new ActionType<>("EntityFloatPair", ENTITY_FLOAT_PAIR_ACTION_FACTORY_REG);
+		BIENTITY_FLOAT_TRIPLET_ACTION_TYPE = new ActionType<>("BiEntityFloatTriplet", BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_REG);
 
-		ENTITY_DAMAGE_PAIR_ACTION_FACTORY_DATA_TYPE = action(ClassUtil.castClass(ActionFactory.Instance.class), ENTITY_DAMAGE_PAIR_ACTION_TYPE);
-		BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_DATA_TYPE = action(ClassUtil.castClass(ActionFactory.Instance.class), BIENTITY_DAMAGE_TRIPLET_ACTION_TYPE);
+		ENTITY_FLOAT_PAIR_ACTION_FACTORY_DATA_TYPE = action(ClassUtil.castClass(ActionFactory.Instance.class), ENTITY_FLOAT_PAIR_ACTION_TYPE);
+		BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_DATA_TYPE = action(ClassUtil.castClass(ActionFactory.Instance.class), BIENTITY_FLOAT_TRIPLET_ACTION_TYPE);
 
-		ENTITY_DAMAGE_PAIRS_DATA_TYPE = SerializableDataType.list(ENTITY_DAMAGE_PAIR_ACTION_FACTORY_DATA_TYPE);
-		BIENTITY_DAMAGE_TRIPLETS_DATA_TYPE = SerializableDataType.list(BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_DATA_TYPE);
+		ENTITY_FLOAT_PAIRS_DATA_TYPE = SerializableDataType.list(ENTITY_FLOAT_PAIR_ACTION_FACTORY_DATA_TYPE);
+		BIENTITY_FLOAT_TRIPLETS_DATA_TYPE = SerializableDataType.list(BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_DATA_TYPE);
 
 
 		PowerFactory<SelfActionKnowingDamageOnHitPower> selfActionKnowingDamageOnHitPowerPowerFactory =

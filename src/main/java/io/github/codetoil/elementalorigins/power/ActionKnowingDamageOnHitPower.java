@@ -51,7 +51,7 @@ public class ActionKnowingDamageOnHitPower extends CooldownPower
 	{
 		return new PowerFactory<ActionKnowingDamageOnHitPower>(new Identifier("elementalorigins:action_knowing_damage_on_hit"),
 				new SerializableData()
-						.add("bientity_damage_triplet_action", ElementalOrigins.BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_DATA_TYPE)
+						.add("bientity_damage_triplet_action", ElementalOrigins.BIENTITY_FLOAT_TRIPLET_ACTION_FACTORY_DATA_TYPE)
 						.add("damage_condition", ApoliDataTypes.DAMAGE_CONDITION, null)
 						.add("cooldown", SerializableDataTypes.INT, 1)
 						.add("hud_render", ApoliDataTypes.HUD_RENDER, HudRender.DONT_RENDER)
