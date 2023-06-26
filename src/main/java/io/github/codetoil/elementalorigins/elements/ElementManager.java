@@ -1,7 +1,5 @@
 package io.github.codetoil.elementalorigins.elements;
 
-import com.google.common.collect.Sets;
-import io.github.apace100.apoli.power.PowerType;
 import io.github.apace100.calio.registry.DataObjectRegistry;
 import io.github.apace100.calio.resource.OrderedResourceListenerInitializer;
 import io.github.apace100.calio.resource.OrderedResourceListenerManager;
@@ -12,28 +10,23 @@ import io.github.codetoil.elementalorigins.ElementalOrigins;
 import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.EntityShapeContext;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.resource.ResourceType;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import org.apache.commons.compress.utils.Lists;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public class ElementManager implements OrderedResourceListenerInitializer
 {
 	public static final Identifier ELEMENT_ID = new Identifier("elementalorigins", "element");

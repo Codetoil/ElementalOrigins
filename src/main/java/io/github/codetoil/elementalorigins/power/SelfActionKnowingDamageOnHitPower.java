@@ -54,8 +54,8 @@ public class SelfActionKnowingDamageOnHitPower extends CooldownPower
 		return new PowerFactory<SelfActionKnowingDamageOnHitPower>(
 				new Identifier("elementalorigins:self_action_knowing_damage_on_hit"),
 				new SerializableData()
-						.add("entity_damage_pair_action",
-								ElementalOrigins.ENTITY_DAMAGE_PAIR_ACTION_FACTORY_DATA_TYPE)
+						.add("entity_float_pair_action",
+								ElementalOrigins.ENTITY_FLOAT_PAIR_ACTION_FACTORY_DATA_TYPE)
 						.add("damage_condition", ApoliDataTypes.DAMAGE_CONDITION, null)
 						.add("cooldown", SerializableDataTypes.INT, 1)
 						.add("hud_render", ApoliDataTypes.HUD_RENDER, HudRender.DONT_RENDER)
@@ -65,7 +65,7 @@ public class SelfActionKnowingDamageOnHitPower extends CooldownPower
 								data.getInt("cooldown"),
 								data.get("hud_render"),
 								data.get("damage_condition"),
-								data.get("entity_damage_pair_action"),
+								data.get("entity_float_pair_action"),
 								data.get("target_condition")))
 				.allowCondition();
 	}
