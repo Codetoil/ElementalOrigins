@@ -1,0 +1,24 @@
+{
+	"type": "elementalorigins:self_action_knowing_damage_on_hit",
+	"entity_damage_pair_action": {
+		"type": "elementalorigins:percentage_damage",
+		"percentage": -20.0,
+		"source": {
+			"name": "life_fire",
+			"bypasses_armor": true,
+			"fire": true,
+			"unblockable": true
+		}
+	},
+	"damage_condition": {
+		"type": "origins:projectile",
+		"inverted": true
+	},
+	"target_condition": {
+		"type": "origins:in_tag",
+		"tag": "elementalorigins:element/fire"
+	},
+	"name": "power.elementalorigins.damage_life_fire.name",
+	"description": "power.elementalorigins.damage_life_fire.description",
+	"cooldown": 1
+}

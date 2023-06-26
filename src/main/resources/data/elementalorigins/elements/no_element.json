@@ -1,0 +1,9 @@
+{
+	"element_id": "elementalorigins:no_element",
+	"origin": "origins:empty",
+	"blocks": "elementalorigins:element/no_element",
+	"fluids": "elementalorigins:element/no_element",
+	"entities": "elementalorigins:element/no_element",
+	"weaknesses": "elementalorigins:weaknesses/no_element",
+	"strengths": "elementalorigins:strengths/no_element"
+}

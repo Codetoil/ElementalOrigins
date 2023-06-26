@@ -1,0 +1,24 @@
+{
+	"type": "elementalorigins:self_action_knowing_damage_on_hit",
+	"entity_damage_pair_action": {
+		"type": "elementalorigins:percentage_damage",
+		"percentage": -20.0,
+		"source": {
+			"name": "air_life",
+			"bypasses_armor": true,
+			"fire": false,
+			"unblockable": true
+		}
+	},
+	"damage_condition": {
+		"type": "origins:projectile",
+		"inverted": true
+	},
+	"target_condition": {
+		"type": "origins:in_tag",
+		"tag": "elementalorigins:element/life"
+	},
+	"name": "power.elementalorigins.damage_air_life.name",
+	"description": "power.elementalorigins.damage_air_life.description",
+	"cooldown": 1
+}

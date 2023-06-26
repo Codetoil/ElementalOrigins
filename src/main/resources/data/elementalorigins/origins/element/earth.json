@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"elementalorigins:damage_earth_air",
+		"elementalorigins:damage_earth_life",
+		"elementalorigins:damage_earth_water",
+		"elementalorigins:digging",
+		"origins:fire_immunity",
+		"origins:water_vulnerability",
+		"origins:natural_armor",
+		"elementalorigins:earth_vision",
+		"elementalorigins:earth_reach"
+	],
+	"name": "origin.elementalorigins.earth",
+	"description": "origin.elementalorigins.earth.description",
+	"icon": "minecraft:stone",
+	"order": 1,
+	"impact": 3
+}

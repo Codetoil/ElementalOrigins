@@ -21,10 +21,13 @@ public abstract class LivingEntityMixin
 		if(cir.getReturnValue()) {
 			Entity attacker = source.getAttacker();
 			if(attacker != null) {
-				PowerHolderComponent.withPowers(attacker, ActionKnowingDamageOnHitPower.class, p -> true, p -> p.onHit((LivingEntity)(Object)this, source, amount));
+				PowerHolderComponent.withPowers(attacker, ActionKnowingDamageOnHitPower.class, p -> true,
+						p -> p.onHit((LivingEntity)(Object)this, source, amount));
 			}
-			PowerHolderComponent.withPowers(attacker, SelfActionKnowingDamageOnHitPower.class, p -> true, p -> p.onHit((LivingEntity)(Object)this, source, amount));
-			PowerHolderComponent.withPowers(attacker, TargetActionKnowingDamageOnHitPower.class, p-> true, p -> p.onHit((LivingEntity)(Object)this, source, amount));
+			PowerHolderComponent.withPowers(attacker, SelfActionKnowingDamageOnHitPower.class, p -> true,
+					p -> p.onHit((LivingEntity)(Object)this, source, amount));
+			PowerHolderComponent.withPowers(attacker, TargetActionKnowingDamageOnHitPower.class, p-> true,
+					p -> p.onHit((LivingEntity)(Object)this, source, amount));
 		}
 	}
 }

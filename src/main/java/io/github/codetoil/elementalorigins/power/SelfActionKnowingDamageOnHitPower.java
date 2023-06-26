@@ -23,7 +23,10 @@ public class SelfActionKnowingDamageOnHitPower extends CooldownPower
 	private final Predicate<Entity> targetCondition;
 	private final Consumer<Pair<Entity, Float>> entityDamagePairAction;
 
-	public SelfActionKnowingDamageOnHitPower(PowerType<?> type, LivingEntity entity, int cooldownDuration, HudRender hudRender, Predicate<Pair<DamageSource, Float>> damageCondition, Consumer<Pair<Entity, Float>> entityDamagePairAction, Predicate<Entity> targetCondition)
+	public SelfActionKnowingDamageOnHitPower(PowerType<?> type, LivingEntity entity, int cooldownDuration,
+											 HudRender hudRender, Predicate<Pair<DamageSource, Float>> damageCondition,
+											 Consumer<Pair<Entity, Float>> entityDamagePairAction,
+											 Predicate<Entity> targetCondition)
 	{
 		super(type, entity, cooldownDuration, hudRender);
 		this.damageCondition = damageCondition;
@@ -48,9 +51,11 @@ public class SelfActionKnowingDamageOnHitPower extends CooldownPower
 
 	public static PowerFactory<SelfActionKnowingDamageOnHitPower> createFactory()
 	{
-		return new PowerFactory<SelfActionKnowingDamageOnHitPower>(new Identifier("elementalorigins:self_action_knowing_damage_on_hit"),
+		return new PowerFactory<SelfActionKnowingDamageOnHitPower>(
+				new Identifier("elementalorigins:self_action_knowing_damage_on_hit"),
 				new SerializableData()
-						.add("entity_damage_pair_action", ElementalOrigins.ENTITY_DAMAGE_PAIR_ACTION_FACTORY_DATA_TYPE)
+						.add("entity_damage_pair_action",
+								ElementalOrigins.ENTITY_DAMAGE_PAIR_ACTION_FACTORY_DATA_TYPE)
 						.add("damage_condition", ApoliDataTypes.DAMAGE_CONDITION, null)
 						.add("cooldown", SerializableDataTypes.INT, 1)
 						.add("hud_render", ApoliDataTypes.HUD_RENDER, HudRender.DONT_RENDER)

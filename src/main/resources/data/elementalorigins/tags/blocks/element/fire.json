@@ -1,0 +1,26 @@
+{
+	"values": [
+		"minecraft:black_candle",
+		"minecraft:blue_candle",
+		"minecraft:brown_candle",
+		"minecraft:cyan_candle",
+		"minecraft:fire",
+		"minecraft:gray_candle",
+		"minecraft:green_candle",
+		"minecraft:lava",
+		"minecraft:light_blue_candle",
+		"minecraft:light_gray_candle",
+		"minecraft:lime_candle",
+		"minecraft:magenta_candle",
+		"minecraft:magma_block",
+		"minecraft:orange_candle",
+		"minecraft:pink_candle",
+		"minecraft:purple_candle",
+		"minecraft:red_candle",
+		"minecraft:redstone_torch",
+		"minecraft:redstone_wall_torch",
+		"minecraft:torch",
+		"minecraft:wall_torch",
+		"minecraft:white_candle"
+	]
+}

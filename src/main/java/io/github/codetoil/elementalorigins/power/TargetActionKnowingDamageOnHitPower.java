@@ -23,7 +23,11 @@ public class TargetActionKnowingDamageOnHitPower extends CooldownPower
 	private final Predicate<Entity> targetCondition;
 	private final Consumer<Pair<Entity, Float>> entityDamagePairAction;
 
-	public TargetActionKnowingDamageOnHitPower(PowerType<?> type, LivingEntity entity, int cooldownDuration, HudRender hudRender, Predicate<Pair<DamageSource, Float>> damageCondition, Consumer<Pair<Entity, Float>> entityDamagePairAction, Predicate<Entity> targetCondition)
+	public TargetActionKnowingDamageOnHitPower(PowerType<?> type, LivingEntity entity, int cooldownDuration,
+											   HudRender hudRender,
+											   Predicate<Pair<DamageSource, Float>> damageCondition,
+											   Consumer<Pair<Entity, Float>> entityDamagePairAction,
+											   Predicate<Entity> targetCondition)
 	{
 		super(type, entity, cooldownDuration, hudRender);
 		this.damageCondition = damageCondition;

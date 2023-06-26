@@ -1,0 +1,21 @@
+{
+  "type": "origins:phasing",
+  "blacklist": false,
+  "render_type": "blindness",
+  "view_distance": 20.0,
+  "block_condition": {
+    "type": "origins:in_tag",
+    "tag": "elementalorigins:earth_phasable"
+  },
+  "phase_down_condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:sneaking"
+      },
+      {
+        "type": "origins:on_block"
+      }
+    ]
+  }
+}

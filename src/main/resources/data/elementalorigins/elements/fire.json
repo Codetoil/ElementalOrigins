@@ -1,0 +1,9 @@
+{
+	"element_id": "elementalorigins:fire",
+	"origin": "elementalorigins:element/fire",
+	"blocks": "elementalorigins:element/fire",
+	"fluids": "elementalorigins:element/fire",
+	"entities": "elementalorigins:element/fire",
+	"weaknesses": "elementalorigins:weaknesses/fire",
+	"strengths": "elementalorigins:strengths/fire"
+}

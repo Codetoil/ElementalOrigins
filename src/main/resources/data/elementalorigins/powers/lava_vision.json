@@ -1,0 +1,11 @@
+{
+	"type": "origins:lava_vision",
+	"s": 0.0,
+	"v": 50.0,
+	"condition": {
+		"type": "origins:submerged_in",
+		"fluid": "elementalorigins:element/fire"
+	},
+	"name": "power.elementalorigins.lava_vision.name",
+	"description": "power.elementalorigins.lava_vision.description"
+}

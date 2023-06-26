@@ -14,8 +14,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.Objects;
 
-public record Element(Identifier id, Origin origin, TagKey<Block> blocks, TagKey<EntityType<?>> entityTypes, TagKey<Fluid> fluids,
-                      ElementTag weaknesses, ElementTag strengths) implements DataObject<Element>
+public record Element(Identifier id, Origin origin, TagKey<Block> blocks, TagKey<EntityType<?>> entityTypes,
+					  TagKey<Fluid> fluids, ElementTag weaknesses, ElementTag strengths) implements DataObject<Element>
 {
 
 	@Override

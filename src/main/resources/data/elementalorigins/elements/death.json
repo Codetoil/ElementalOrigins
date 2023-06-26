@@ -1,0 +1,9 @@
+{
+	"element_id": "elementalorigins:death",
+	"origin": "elementalorigins:element/death",
+	"blocks": "elementalorigins:element/death",
+	"fluids": "elementalorigins:element/death",
+	"entities": "elementalorigins:element/death",
+	"weaknesses": "elementalorigins:weaknesses/death",
+	"strengths": "elementalorigins:strengths/death"
+}

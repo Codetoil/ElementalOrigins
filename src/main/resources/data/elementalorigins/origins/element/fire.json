@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"elementalorigins:damage_fire_earth",
+		"elementalorigins:damage_fire_water",
+		"origins:fire_immunity",
+		"origins:flame_particles",
+		"origins:hotblooded",
+		"origins:nether_spawn",
+		"origins:water_vulnerability",
+		"elementalorigins:lava_vision",
+		"elementalorigins:lava_speed",
+		"elementalorigins:lava_swimming"
+	],
+	"name": "origin.elementalorigins.fire",
+	"description": "origin.elementalorigins.fire.description",
+	"icon": "minecraft:lava_bucket",
+	"order": 1,
+	"impact": 3
+}

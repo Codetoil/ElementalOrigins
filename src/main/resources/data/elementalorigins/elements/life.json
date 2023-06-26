@@ -1,0 +1,9 @@
+{
+	"element_id": "elementalorigins:life",
+	"origin": "elementalorigins:element/life",
+	"blocks": "elementalorigins:element/life",
+	"fluids": "elementalorigins:element/life",
+	"entities": "elementalorigins:element/life",
+	"weaknesses": "elementalorigins:weaknesses/life",
+	"strengths": "elementalorigins:strengths/life"
+}

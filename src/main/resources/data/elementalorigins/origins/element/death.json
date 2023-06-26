@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"elementalorigins:damage_death_air",
+		"elementalorigins:damage_death_earth",
+		"elementalorigins:damage_death_fire",
+		"elementalorigins:damage_death_water"
+	],
+	"name": "origin.elementalorigins.death",
+	"description": "origin.elementalorigins.death.description",
+	"icon": "minecraft:zombie_head",
+	"order": 1,
+	"impact": 3
+}

@@ -1,0 +1,9 @@
+{
+	"type": "origins:swimming",
+	"condition": {
+		"type": "origins:submerged_in",
+		"fluid": "elementalorigins:element/fire"
+	},
+	"name": "power.elementalorigins.lava_swimming.name",
+	"description": "power.elementalorigins.lava_swimming.description"
+}

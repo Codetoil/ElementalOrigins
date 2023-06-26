@@ -1,0 +1,9 @@
+{
+	"element_id": "elementalorigins:earth",
+	"origin": "elementalorigins:element/earth",
+	"blocks": "elementalorigins:element/earth",
+	"fluids": "elementalorigins:element/earth",
+	"entities": "elementalorigins:element/earth",
+	"weaknesses": "elementalorigins:weaknesses/earth",
+	"strengths": "elementalorigins:strengths/earth"
+}

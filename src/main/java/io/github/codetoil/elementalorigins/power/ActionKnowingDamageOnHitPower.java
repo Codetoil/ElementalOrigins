@@ -24,7 +24,10 @@ public class ActionKnowingDamageOnHitPower extends CooldownPower
 	private final Predicate<Pair<Entity, Entity>> bientityCondition;
 	private final Consumer<Triplet<Entity, Entity, Float>> bientityDamageTripletAction;
 
-	public ActionKnowingDamageOnHitPower(PowerType<?> type, LivingEntity entity, int cooldownDuration, HudRender hudRender, Predicate<Pair<DamageSource, Float>> damageCondition, Consumer<Triplet<Entity, Entity, Float>> bientityDamageTripletAction, Predicate<Pair<Entity,Entity>> bientityCondition)
+	public ActionKnowingDamageOnHitPower(PowerType<?> type, LivingEntity entity, int cooldownDuration,
+										 HudRender hudRender, Predicate<Pair<DamageSource, Float>> damageCondition,
+										 Consumer<Triplet<Entity, Entity, Float>> bientityDamageTripletAction,
+										 Predicate<Pair<Entity,Entity>> bientityCondition)
 	{
 		super(type, entity, cooldownDuration, hudRender);
 		this.damageCondition = damageCondition;
@@ -49,9 +52,11 @@ public class ActionKnowingDamageOnHitPower extends CooldownPower
 
 	public static PowerFactory<ActionKnowingDamageOnHitPower> createFactory()
 	{
-		return new PowerFactory<ActionKnowingDamageOnHitPower>(new Identifier("elementalorigins:action_knowing_damage_on_hit"),
+		return new PowerFactory<ActionKnowingDamageOnHitPower>(
+				new Identifier("elementalorigins:action_knowing_damage_on_hit"),
 				new SerializableData()
-						.add("bientity_damage_triplet_action", ElementalOrigins.BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_DATA_TYPE)
+						.add("bientity_damage_triplet_action",
+								ElementalOrigins.BIENTITY_DAMAGE_TRIPLET_ACTION_FACTORY_DATA_TYPE)
 						.add("damage_condition", ApoliDataTypes.DAMAGE_CONDITION, null)
 						.add("cooldown", SerializableDataTypes.INT, 1)
 						.add("hud_render", ApoliDataTypes.HUD_RENDER, HudRender.DONT_RENDER)

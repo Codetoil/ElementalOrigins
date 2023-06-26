@@ -1,0 +1,9 @@
+{
+	"element_id": "elementalorigins:air",
+	"origin": "elementalorigins:element/air",
+	"blocks": "elementalorigins:element/air",
+	"fluids": "elementalorigins:element/air",
+	"entities": "elementalorigins:element/air",
+	"weaknesses": "elementalorigins:weaknesses/air",
+	"strengths": "elementalorigins:strengths/air"
+}

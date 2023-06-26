@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"elementalorigins:damage_life_death",
+		"elementalorigins:damage_life_fire"
+	],
+	"name": "origin.elementalorigins.life",
+	"description": "origin.elementalorigins.life.description",
+	"icon": "minecraft:oak_log",
+	"order": 1,
+	"impact": 2
+}

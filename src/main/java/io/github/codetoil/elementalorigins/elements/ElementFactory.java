@@ -4,7 +4,6 @@ import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import io.github.apace100.calio.registry.DataObjectFactory;
 import io.github.apace100.origins.origin.OriginRegistry;
-import org.spongepowered.include.com.google.common.base.Throwables;
 
 public class ElementFactory implements DataObjectFactory<Element>
 {

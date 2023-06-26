@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.1-SNAPSHOT'
+	id 'fabric-loom' version '1.2-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -36,6 +36,7 @@ repositories {
     maven {
         url "https://maven.terraformersmc.com/"
     }
+    mavenLocal()
 }
 
 dependencies {
