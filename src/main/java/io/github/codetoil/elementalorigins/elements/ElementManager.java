@@ -146,19 +146,6 @@ public class ElementManager implements OrderedResourceListenerInitializer
 		}
 	}
 
-	public static void getOutlineShape(BlockState state, BlockView world, BlockPos pos, EntityShapeContext context,
-									   CallbackInfoReturnable<VoxelShape> cir)
-	{
-		if (getEntityElements(context.getEntity()).stream().filter(element -> {
-					Origin origin = element.origin();
-					return origin.hasPowerType(ElementalOrigins.EARTH_REACH_POWER_TYPE);
-				})
-				.anyMatch(element -> state.isIn(element.blocks())))
-		{
-			cir.setReturnValue(VoxelShapes.fullCube());
-		}
-	}
-
 	@Override
 	public void registerResourceListeners(OrderedResourceListenerManager manager) {
 		Identifier originData = Origins.identifier("origins");

@@ -1,6 +1,6 @@
 {
 	"type": "elementalorigins:self_action_knowing_damage_on_hit",
-	"entity_damage_pair_action": {
+	"entity_float_pair_action": {
 		"type": "elementalorigins:percentage_damage",
 		"percentage": -20.0,
 		"source": {

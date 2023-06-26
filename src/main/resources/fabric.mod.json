@@ -17,6 +17,9 @@
 
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "io.github.codetoil.elementalorigins.datagen.DataGeneration"
+    ],
     "main": [
       "io.github.codetoil.elementalorigins.ElementalOrigins"
     ],
@@ -31,7 +34,7 @@
   "depends": {
     "fabricloader": ">=0.14.11",
     "fabric-api": "*",
-    "minecraft": "~1.19.3",
+    "minecraft": "~1.20.1",
     "java": ">=17",
     "origins": "*"
   },
